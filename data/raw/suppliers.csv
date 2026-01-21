@@ -1,0 +1,4 @@
+supplier_id,supplier_name,email,phone,city,state,country
+1,TechSupplier,tech@supplier.com,1111111111,San Jose,CA,USA
+2,AudioWorld,audio@supplier.com,2222222222,Austin,TX,USA
+3,FurniCo,furni@supplier.com,3333333333,Seattle,WA,USA

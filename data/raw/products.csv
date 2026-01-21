@@ -1,0 +1,6 @@
+product_id,product_name,category,supplier_id,cost_price
+1,Phone,Electronics,1,400
+2,Laptop,Electronics,1,900
+3,Headphones,Accessories,2,50
+4,Desk,Furniture,3,150
+5,Chair,Furniture,3,80

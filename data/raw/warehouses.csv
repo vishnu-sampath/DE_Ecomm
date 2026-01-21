@@ -1,0 +1,4 @@
+warehouse_id,warehouse_name,city,state,country
+1,East Coast Warehouse,Newark,NJ,USA
+2,West Coast Warehouse,San Francisco,CA,USA
+3,Central Warehouse,Dallas,TX,USA

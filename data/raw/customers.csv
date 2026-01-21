@@ -1,0 +1,5 @@
+customer_id,customer_name,email,phone,city,state,country
+1,John Doe,john@example.com,1234567890,New York,NY,USA
+2,Jane Smith,jane@example.com,2345678901,Los Angeles,CA,USA
+3,Mark Lee,mark@example.com,3456789012,Chicago,IL,USA
+4,Sara Khan,sara@example.com,4567890123,Dallas,TX,USA
