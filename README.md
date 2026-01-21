@@ -1,8 +1,8 @@
 # Omni Channel Retailer - Data Engineering
-End-to-end e-commerce data engineering project using Azure and local Docker
+End-to-end data engineering project using Azure and local Docker for an omni-channel retailer.
 
 ## Project Goal
-Build an end-to-end store and online sales retailer data engineering pipeline using Azure Blob Storage and open-source tools.
+Build an end-to-end data engineering pipeline using Azure Blob Storage and open-source tools for a retailer selling products via two channels - online and brick-and-mortar stores.
 
 ## Architecture
 All compute components run locally using Docker. Azure Blob Storage is used only for object storage (raw, staged, curated).
