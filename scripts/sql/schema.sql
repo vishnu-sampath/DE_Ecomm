@@ -18,11 +18,11 @@ USE de_ecomm;
 -- =====================
 
 CREATE TABLE products (
-    product_id INT PRIMARY KEY,
-    product_name VARCHAR(100),
-    category VARCHAR(50),
-    supplier_id INT,
-    cost_price DECIMAL(10, 2)
+  product_id INT PRIMARY KEY,
+  product_name VARCHAR(100),
+  category VARCHAR(50),
+  supplier_id INT,
+  cost_price DECIMAL(10, 2)
 );
 
 -- =====================
@@ -30,13 +30,13 @@ CREATE TABLE products (
 -- =====================
 
 CREATE TABLE customers (
-    customer_id INT PRIMARY KEY,
-    customer_name VARCHAR(100),
-    email VARCHAR(100),
-    phone VARCHAR(10),
-    city VARCHAR(50),
-    state VARCHAR(50),
-    country VARCHAR(50)
+  customer_id INT PRIMARY KEY,
+  customer_name VARCHAR(100),
+  email VARCHAR(100),
+  phone VARCHAR(25),
+  city VARCHAR(75),
+  state VARCHAR(75),
+  country VARCHAR(75)
 );
 
 -- =====================
@@ -46,10 +46,10 @@ CREATE TABLE suppliers (
   supplier_id INT PRIMARY KEY,
   supplier_name VARCHAR(100),
   email VARCHAR(100),
-  phone VARCHAR(20),
-  city VARCHAR(50),
-  state VARCHAR(50),
-  country VARCHAR(50)
+  phone VARCHAR(25),
+  city VARCHAR(75),
+  state VARCHAR(75),
+  country VARCHAR(75)
 );
 
 -- =====================
@@ -59,9 +59,9 @@ CREATE TABLE suppliers (
 CREATE TABLE stores (
   store_id INT PRIMARY KEY,
   store_name VARCHAR(100),
-  city VARCHAR(50),
-  state VARCHAR(50),
-  country VARCHAR(50)
+  city VARCHAR(75),
+  state VARCHAR(75),
+  country VARCHAR(75)
 );
 
 -- =====================
@@ -70,9 +70,9 @@ CREATE TABLE stores (
 CREATE TABLE warehouses (
   warehouse_id INT PRIMARY KEY,
   warehouse_name VARCHAR(100),
-  city VARCHAR(50),
-  state VARCHAR(50),
-  country VARCHAR(50)
+  city VARCHAR(75),
+  state VARCHAR(75),
+  country VARCHAR(75)
 );
 
 -- =========================================
@@ -83,13 +83,14 @@ CREATE TABLE warehouses (
 -- TABLE: sales
 -- =====================
 CREATE TABLE sales (
-  sale_id INT PRIMARY KEY,
+  sale_id INT,
   sale_date DATE,
   product_id INT,
   customer_id INT,
   store_id INT,
   quantity INT,
-  unit_price DECIMAL(10, 2)
+  unit_price DECIMAL(10, 2),
+  PRIMARY KEY (sale_id, product_id)
 );
 
 -- =====================
