@@ -6,6 +6,7 @@ from generate_customers import main as generate_customers
 from generate_sales import main as generate_sales
 from generate_inventory import main as generate_inventory
 from generate_returns import main as generate_returns
+from check_table_sizes import main as check_table_sizes
 
 GENERATORS = [
     generate_products,
@@ -22,6 +23,7 @@ if __name__ == "__main__":
     try:
         for generator in GENERATORS:
             generator()
-        print("All scripts completed successfully")
+        print("\nAll scripts completed successfully\n")
+        check_table_sizes()
     except Exception as e:
         print("Error:", e)
