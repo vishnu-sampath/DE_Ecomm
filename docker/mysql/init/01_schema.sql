@@ -4,7 +4,7 @@
 -- ======================================
 
 -- UNCOMMENT IF RUN OUTSIDE OF DOCKER
------------------------------------------
+-- ======================================
 -- DROP DATABASE IF EXISTS de_ecomm;
 -- CREATE DATABASE de_ecomm;
 

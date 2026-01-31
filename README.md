@@ -19,3 +19,11 @@ All compute components run locally using Docker. Azure Blob Storage is used only
 - Azure Blob Storage
 - Power BI Desktop
 
+# Steps
+## Docker MySQL
+- cd docker/mysql
+- docker compose down -v                        # cleaning the container (if it exists)
+- docker compose up -d                          # creates docker container using 'docker-compose.yml' (in /docker/mysql)
+- docker exec -it mysql-ecomm mysql -u ecomm_user1 -p       # connect to db as a terminal
+- cd ../../scripts/data-generator
+- python run_all_generators.py

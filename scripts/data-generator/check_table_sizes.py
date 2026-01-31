@@ -1,14 +1,19 @@
+import os
 import mysql.connector
+from dotenv import load_dotenv
 
 def main():
     # ----------------------------
     # CONFIGURATION
     # ----------------------------
+    load_dotenv()
+    
     DB_CONFIG = {
-        "host": "localhost",
-        "user": "root",
-        "password": "Password@123",
-        "database": "de_ecomm"
+        "host" : os.getenv("MYSQL_HOST"),
+        "port" : int(os.getenv("MYSQL_PORT")),
+        "user" : os.getenv("MYSQL_USER"),
+        "password" : os.getenv("MYSQL_PASSWORD"),
+        "database" : os.getenv("MYSQL_DATABASE")
     }
 
     TABLES = [
