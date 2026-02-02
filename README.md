@@ -20,10 +20,18 @@ All compute components run locally using Docker. Azure Blob Storage is used only
 - Power BI Desktop
 
 # Steps
+## Python Virtual Environment
+- pip install venv                          # if needed
+- python -m venv de_py_env                  # creates virtual environment 'de_py_env'
+- source ./de_py_env/Scripts/activate       # for linux / gitbash (Activate.ps1 if powershell)
+- which python                              # verify
+- pip install pyspark mysql-connector-python python-dotenv faker
+- pip freeze > requirements.txt
+
 ## Docker MySQL
-- cd docker/mysql
+- cd /DE_ECOMM/docker/mysql
 - docker compose down -v                        # cleaning the container (if it exists)
 - docker compose up -d                          # creates docker container using 'docker-compose.yml' (in /docker/mysql)
-- docker exec -it mysql-ecomm mysql -u ecomm_user1 -p       # connect to db as a terminal
-- cd ../../scripts/data-generator
-- python run_all_generators.py
+- docker exec -it mysql-ecomm mysql -u ecomm_user1 -p       # connect to db as a terminal to check tables
+- cd /DE_ECOMM/scripts/data-generator
+- python run_all_generators.py                  # generates data using Faker library

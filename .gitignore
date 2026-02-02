@@ -1,0 +1,15 @@
+# Python
+de_py_env/
+__pycache__/
+*.pyc
+
+# Spark temporary files
+scripts/spark/tmp_spark/*
+!scripts/spark/tmp_spark/.gitkeep
+
+# Docker runtime stuff
+*.log
+
+# OS junk
+.DS_Store
+Thumbs.db
