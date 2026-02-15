@@ -1,0 +1,32 @@
+# version: "3.8"
+
+services:
+  spark:
+    image: apache/spark:3.5.1
+    container_name: spark-ecomm-task
+    user: root
+    environment:
+      - MYSQL_HOST
+      - MYSQL_PORT
+      - MYSQL_USER
+      - MYSQL_PASSWORD
+      - MYSQL_DATABASE
+    volumes:
+      - ../../:/opt/project
+      - spark_ivy_cache:/home/spark/.ivy2
+    working_dir: /opt/project
+    networks:
+      - de_network
+    # No 'command' here if you want to pass it via CLI, 
+    # or keep it as below to run automatically:
+    command: >
+      /opt/spark/bin/spark-submit
+      --master local[*]
+      --packages mysql:mysql-connector-java:8.0.33
+      scripts/spark/extract/extract_sales.py
+
+volumes:
+  spark_ivy_cache:
+networks:
+  de_network:
+    external: true

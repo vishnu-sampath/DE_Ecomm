@@ -13,3 +13,8 @@ scripts/spark/tmp_spark/*
 # OS junk
 .DS_Store
 Thumbs.db
+
+# Bronze raw data - Equivalent to Blob storage on Cloud
+data/bronze/sales/*
+
+scripts/data-generator/__pycache__/*

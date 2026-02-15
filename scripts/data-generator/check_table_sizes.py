@@ -1,12 +1,16 @@
 import os
 import mysql.connector
 from dotenv import load_dotenv
+from pathlib import Path
 
 def main():
     # ----------------------------
     # CONFIGURATION
     # ----------------------------
-    load_dotenv()
+
+    # Get the path to the .env file in the CURRENT script directory
+    env_path = Path(__file__).parent / ".env"
+    load_dotenv(dotenv_path=env_path)
     
     DB_CONFIG = {
         "host" : os.getenv("MYSQL_HOST"),

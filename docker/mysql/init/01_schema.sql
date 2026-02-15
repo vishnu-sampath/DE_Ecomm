@@ -10,6 +10,10 @@
 
 USE de_ecomm;
 
+-- This ensures your 'user' from .env can connect from your physical machine
+GRANT ALL PRIVILEGES ON *.* TO 'ecomm_user1'@'%';
+FLUSH PRIVILEGES;
+
 -- =========================================
 -- DIMENSION TABLES
 -- =========================================
